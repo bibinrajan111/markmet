@@ -2,22 +2,11 @@
   position: sticky;
   top: 0;
   z-index: 50;
-
-  /* WHITE → TRANSPARENT → DARK GRADIENT */
-  background: linear-gradient(
-    90deg,
-    #ffffff 0%,
-    #ffffff 18%,
-    rgba(255, 255, 255, 0.8) 28%,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(8, 8, 8, 0.88) 65%,
-    rgba(61, 106, 108, 0.86) 100%
-  );
-
-  border-bottom: 1px solid rgba(247, 201, 72, 0.4);
+  backdrop-filter: blur(8px);
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.78) 28%, rgba(5, 7, 10, 0.92) 63%, rgba(0, 126, 178, 0.84) 100%);
+  border-bottom: 1px solid rgba(0, 126, 178, 0.34);
 }
 
-/* Layout */
 .header-inner {
   display: flex;
   align-items: center;
@@ -26,7 +15,6 @@
   gap: 1rem;
 }
 
-/* LOGO */
 .logo-wrap {
   display: flex;
   align-items: center;
@@ -40,31 +28,30 @@
   display: block;
 }
 
-/* NAV */
 .desktop-nav {
   display: flex;
   gap: 1rem;
 }
 
 .nav-link {
-  color: #fff;
-  padding: 0.4rem 0.8rem;
+  color: var(--pure-white);
+  padding: 0.45rem 0.92rem;
   border-radius: 999px;
+  border: 1px solid transparent;
   transition: 0.25s;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  background: rgba(247, 201, 72, 0.18);
+  background: rgba(0, 126, 178, 0.18);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
-/* MOBILE BUTTON */
 .mobile-toggle {
   display: none !important;
-  color: #fff !important;
+  color: var(--pure-white) !important;
 }
 
-/* TABLET */
 @media (max-width: 900px) {
   .mobile-toggle {
     display: inline-flex !important;
@@ -74,23 +61,12 @@
     height: 40px;
   }
 
-  .site-header {
-    background: linear-gradient(
-      90deg,
-      #ffffff 0%,
-      #ffffff 25%,
-      rgba(255, 255, 255, 0.6) 35%,
-      rgba(8, 8, 8, 0.9) 60%,
-      rgba(61, 106, 108, 0.9) 100%
-    );
-  }
-
   .desktop-nav {
     position: absolute;
     top: 76px;
     left: 0;
     right: 0;
-    background: rgba(8, 8, 8, 0.95);
+    background: rgba(5, 7, 10, 0.96);
     flex-direction: column;
     padding: 0.8rem 1rem 1.2rem;
     transform: scaleY(0);
@@ -98,6 +74,7 @@
     opacity: 0;
     pointer-events: none;
     transition: 0.25s;
+    border-bottom: 1px solid rgba(0, 126, 178, 0.35);
   }
 
   .desktop-nav.open {
@@ -107,18 +84,12 @@
   }
 }
 
-/* MOBILE */
 @media (max-width: 480px) {
   .logo-img {
     height: 32px;
   }
 
   .site-header {
-    background: linear-gradient(
-      90deg,
-      #ffffff 0%,
-      #ffffff 35%,
-      rgba(8, 8, 8, 0.95) 70%
-    );
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.96), rgba(5, 7, 10, 0.94) 66%);
   }
 }

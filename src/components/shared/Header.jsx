@@ -27,7 +27,7 @@ function Header() {
         </Link>
 
         {/* NAV */}
-        <nav className={`desktop-nav ${open ? 'open' : ''}`}>
+        <nav id="primary-navigation" className={`desktop-nav ${open ? 'open' : ''}`}>
           {links.map((link) => (
             <NavLink
               key={link.to}
@@ -47,6 +47,8 @@ function Header() {
           className="mobile-toggle"
           onClick={() => setOpen((p) => !p)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="primary-navigation"
         >
           {open ? <CloseIcon /> : <MenuIcon />}
         </IconButton>

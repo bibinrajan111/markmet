@@ -12,7 +12,7 @@ function AboutValues() {
     <section className="about-values content-width">
       <h3>Our Core Values</h3>
       {values.map(([title, desc]) => (
-        <Accordion key={title} sx={{ borderRadius: '14px', marginBottom: '.7rem', border: '1px solid rgba(61,106,108,0.2)' }}>
+        <Accordion key={title} sx={{ borderRadius: '14px', marginBottom: '.7rem', border: '1px solid rgba(0,126,178,0.2)' }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography fontWeight={700}>{title}</Typography>
           </AccordionSummary>

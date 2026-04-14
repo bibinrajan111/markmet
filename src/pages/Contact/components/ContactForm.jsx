@@ -136,7 +136,7 @@ function ContactForm() {
           type="submit"
           variant="contained"
           disabled={status.loading}
-          sx={{ backgroundColor: '#3d6a6c' }}
+          sx={{ backgroundColor: 'var(--brand-blue)' }}
         >
           {status.loading ? 'Sending...' : 'Submit Enquiry'}
         </Button>

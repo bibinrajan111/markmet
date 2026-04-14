@@ -1,9 +1,15 @@
 .services-intro {
-  background: linear-gradient(130deg, #080808, #20363a 55%, #3d6a6c);
-  color: #fff;
+  background: linear-gradient(128deg, var(--rich-black), #0f2735 52%, var(--brand-blue));
+  color: var(--pure-white);
   padding: 4.5rem 0;
 }
-.services-intro h2 { font-size: clamp(2rem, 4vw, 3.2rem); max-width: 18ch; }
+
+.services-intro h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  max-width: 18ch;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 .services-grid {
   margin-top: -2rem;
   padding-bottom: 3rem;
@@ -11,6 +17,7 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
+
 .service-card-media {
   height: 180px;
   background-size: cover;
