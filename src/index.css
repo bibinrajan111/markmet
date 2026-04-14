@@ -1,21 +1,31 @@
 @import 'tailwindcss';
 
 :root {
-  --brand-teal: #3d6a6c;
-  --brand-yellow: #f7c948;
-  --off-white: #f8f6f1;
-  --deep-black: #080808;
+  --brand-blue: #007eb2;
+  --brand-blue-dark: #005d86;
+  --brand-blue-soft: #8acde8;
+  --pure-white: #ffffff;
+  --rich-black: #05070a;
+  --slate-black: #121920;
+  --text-primary: #0e141a;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(circle at top, rgba(61, 106, 108, 0.1), transparent 45%), var(--off-white);
-  color: #111;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(0, 126, 178, 0.19), transparent 37%),
+    radial-gradient(circle at 85% 100%, rgba(0, 126, 178, 0.13), transparent 40%),
+    linear-gradient(180deg, var(--pure-white), #f3f9fd);
+  color: var(--text-primary);
 }
 
 a {
@@ -35,15 +45,71 @@ a {
 }
 
 .glass-card {
-  backdrop-filter: blur(8px);
-  background: linear-gradient(140deg, rgba(255, 255, 255, 0.85), rgba(248, 246, 241, 0.62));
-  border: 1px solid rgba(61, 106, 108, 0.2);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.88), rgba(227, 244, 251, 0.68));
+  border: 1px solid rgba(0, 126, 178, 0.18);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.14);
 }
 
 .video-bg::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(8, 8, 8, 0.65), rgba(61, 106, 108, 0.56));
+  background: linear-gradient(122deg, rgba(5, 7, 10, 0.8), rgba(0, 126, 178, 0.52));
+}
+
+main h1,
+main h2,
+main h3,
+main h4 {
+  letter-spacing: 0.01em;
+}
+
+main h2,
+main h3 {
+  text-wrap: balance;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(34px) scale(0.985);
+  filter: blur(4px);
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 700ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.service-mini-card,
+.MuiCard-root,
+.glass-card {
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.service-mini-card:hover,
+.MuiCard-root:hover,
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+  border-color: rgba(0, 126, 178, 0.38);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }
