@@ -14,8 +14,8 @@ export default function ServicesPage() {
       <section className="mx-auto w-[min(1200px,94vw)]">
         <SectionHeading
           label="Services"
-          title="Integrated digital services built for modern brands"
-          description="Select a service to explore the outcomes, workflows, and growth approach Markmet brings to every engagement."
+          title="Integrated services for sustainable digital growth"
+          description="Choose a standalone service or combine multiple capabilities for an end-to-end marketing ecosystem. Every service at Markmet is designed to align with brand objectives, timelines, and ROI expectations."
         />
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">

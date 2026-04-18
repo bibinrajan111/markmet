@@ -12,8 +12,8 @@ export default function AboutPage() {
       <section className="mx-auto w-[min(1200px,94vw)]">
         <SectionHeading
           label="About Markmet"
-          title="Growth strategy, creative execution, and measurable outcomes"
-          description="We blend insight-led planning and high-performance execution to help brands move faster in digital markets."
+          title="About Markmet"
+          description="We are a Kerala-based digital marketing company helping brands build memorable stories, consistent demand, and measurable growth through strategy-led execution."
         />
 
         <div className="grid gap-6 lg:grid-cols-2">
@@ -25,9 +25,18 @@ export default function AboutPage() {
           >
             <Card>
               <CardContent className="space-y-4">
-                <h3 className="text-2xl font-semibold">Our Story</h3>
-                <p className="text-slate-600">Markmet helps modern brands translate ambition into consistent digital growth. We architect campaigns, content, and experiences that drive outcomes—not vanity metrics.</p>
-                <p className="text-slate-600">Every sprint is designed for momentum: clear strategy, rapid iteration, and transparency at every milestone.</p>
+                <h3 className="text-2xl font-semibold">Who We Are</h3>
+                <p className="text-slate-600">
+                  Markmet operates from Piravom, Kerala, delivering integrated marketing and digital
+                  production services for startups, local businesses, and scaling enterprises. We
+                  believe marketing should not be fragmented—strategy, creatives, media, and
+                  technology must collaborate in one ecosystem.
+                </p>
+                <p className="text-slate-600">
+                  Our teams blend audience research, content architecture, media buying, and creative
+                  direction so that each campaign builds long-term brand equity while driving
+                  short-term conversions.
+                </p>
               </CardContent>
             </Card>
           </motion.div>
@@ -43,7 +52,10 @@ export default function AboutPage() {
             playsInline
             className="h-full min-h-72 w-full rounded-2xl object-cover shadow-xl"
           >
-            <source src="https://player.vimeo.com/external/371433814.sd.mp4?s=2366f35f2cf2d4e728fdbd4a0344dbf2e6b6ebf2&profile_id=165&oauth2_token_id=57447761" type="video/mp4" />
+            <source
+              src="https://player.vimeo.com/external/447697281.sd.mp4?s=1bd387f57be16eef88239003ce1bb4f001357349&profile_id=164&oauth2_token_id=57447761"
+              type="video/mp4"
+            />
           </motion.video>
         </div>
 
@@ -54,6 +66,7 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
           className="mt-10"
         >
+          <h3 className="mb-4 text-2xl font-semibold">Our Core Values</h3>
           <Accordion type="single" collapsible>
             {valueItems.map((item) => (
               <AccordionItem key={item.title} value={item.title}>
